@@ -1,4 +1,4 @@
-Assignment 2 - Further Programming Readme File
+
 1. Program Class Design:
    following the MVC Pattern, the class design of my project is as follows:
   A. Inheritance:
