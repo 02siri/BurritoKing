@@ -1,57 +1,95 @@
 
-1. Program Class Design:
-   following the MVC Pattern, the class design of my project is as follows:
-  A. Inheritance:
-  The classes User.java and VIPUser.java follow inheritance, since VIPUser.java is a child class to User.java and inhertits its methods and properties.
-  B. Encapsulation:
-  Mostly all the classes in the project follow encapsulation, since the methods and attributes that are to be set private and kept private and not accessed by any outside class.     Wherever neecessary, my classes have attributes and methods of public visibility, so that it can be accessed by other classes.
-  C.Abstraction :
-  Abstration is widely used in my project, since I made the class FoodItem as an abstract class and all its related food items shared the abstract methods declared in the FoodItem   class.
-  Another way where abstraction is being followed is by creating interfaces of all the Dao classes, and then implementing tham in their respective sub-classes. 
-  D. Composition
-  Composition is heavily followed in the project, since the model classes are part of a lot of methods on the controller classes.The logics defined in the model classes are used     by the controlled classes, to thus make changes in the files in the view package.
+# BurritoKing
 
-3. Design Pattern Implemented:
-   I have implemented two design patterns - Factory Design Pattern and Facade Design Pattern.
-   The Factory design pattern is followed by the model class ItemFactory, and the Facade design pattern is followed by the model class Model.
+BurritoKing is a high-performance, user-friendly **food ordering desktop application** developed using **Java**. Designed with the **Model-View-Controller (MVC) architectural pattern** and adhering to **Object-Oriented Programming (OOP) principles**, BurritoKing offers a seamless experience for both customers and administrators.
 
-4. JUnit Test Implemented:
-   I have implemented 5 unit tests for the User model class in the class UserTest.java.
-   In this class, I have tested the comparison of the username, password,firstName, lastName and email of the user with the mock input provided
-   Following are the unit tests:
-   package model;
+## Features
+- **Intuitive User Interface (UI):** Built with JavaFX and SceneBuilder for an intuitive and responsive user experience, ensuring seamless customer ordering.
+- **Comprehensive Food Ordering System:** Allows users to browse food items, place orders, and manage their selections efficiently.
+- **Database Management:** Integrates SQLite for robust and efficient data storage and retrieval, handling food items, user information, and orders.
+- **Secure User Authentication:** Manages user roles, including regular and VIP users, with differentiated functionalities.
+- **Reliable Functionality:** Implemented with JUnit for comprehensive unit testing to ensure application stability and correctness.
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+## Architecture and Design Patterns
+This project rigorously applies core software engineering principles and design patterns:
+- **MVC Architecture:** Separates the application into Model (data and business logic), View (user interface), and Controller (handles user input and updates model/view).
+- **Object-Oriented Programming (OOP):**
+    - **Inheritance:** Demonstrated with User.java and VIPUser.java, where VIPUser extends User.
+    - **Encapsulation:** Achieved through appropriate use of private and public visibility for methods and attributes across classes.
+    - **Abstraction:** Implemented by making FoodItem an abstract class with shared abstract methods, and through interfaces for all DAO (Data Access Object) classes.
+    - **Composition:** Heavily utilized where model classes' logic is incorporated by controller classes to facilitate updates in the view package.
 
-public class UserTest {
-	@Test
-	public void testUsername() {
-		User user = new User("John_brick","john1234");
-		assertEquals("John_brick",user.getUsername());
-	}
-	@Test
-	public void testPassword() {
-		User user = new User("John_brick","john1234");
-		assertEquals("john1234",user.getPassword());
-	}
-	@Test
-	public void testFirstName() {
-		User user = new User("John_brick","john1234");
-		user.setFirstName("John");
-		assertEquals("John",user.getFirstName());
-	}
-	@Test
-	public void testLastName() {
-		User user = new User("John_brick","john1234");
-		user.setLastName("Brick");
-		assertEquals("Brick",user.getLastName());
-	}
-	@Test
-	public void testEmail() {
-		User user = new User("John_brick","john1234");
-		user.setEmail("john@brick.com");
-		assertEquals("john@brick.com",user.getEmail());
-	}
-	
-}
+**Design Patterns:**
+- **Factory Design Pattern:** Applied through the ItemFactory model class for creating objects.
+- **Facade Design Pattern:** Implemented via the Model class, providing a simplified interface to a complex subsystem.
+
+## Tech Stack
+
+**GUI** 
+- JavaFX
+- SceneBuilder
+
+**Application Logic** 
+- Java:
+
+**Database**
+- JDK
+- JDBC
+- SQLite
+
+**Testing**
+- JUnit
+## Installation and Setup
+
+**Clone the repository**
+```bash
+git clone https://github.com/02siri/BurritoKing.git
+cd BurritoKing
+```
+
+**Prerequisites**
+
+Ensure you have **Java Development Kit (JDK) 8 or higher** installed on your system. 
+You will also need to set up **JavaFX** and **SceneBuilder** in your IDE (e.g., IntelliJ IDEA, Eclipse).
+
+**Database Setup:**
+ 
+The application uses **SQLite**, which typically does not require a separate server setup as the database is file-based.
+
+**Build the project:**
+
+Open the project in your preferred Java IDE (e.g., IntelliJ IDEA). 
+
+Ensure all dependencies (JavaFX, JDBC Driver) are correctly configured. 
+
+Build the project to resolve any dependencies and compile the source code.
+
+
+## Running and Using Application
+
+**Run the application**
+
+Execute the main class from your IDE. 
+
+This will launch the GUI desktop application.
+
+**Customer Module:**
+
+Users can:
+- log-in or sign-up to the food application as a regular of VIP User
+- update or delete profile
+- browse the menu
+- add/remove/edit items to their cart
+- place orders
+- claim reward points
+- view and export previous orders' history
+- log out of the application
+## Testing
+
+The project includes unit tests written with **JUnit** to ensure critical functionalities are robust.
+
+**User Model Tests**
+
+5 JUnit tests are provided in **UserTest.java** file to verify the comparison of username, password, first name, last name, and email with mock input, ensuring the reliability of the User model class.
+
+To run the tests, use your IDE's testing features to execute the JUnit test suite.
