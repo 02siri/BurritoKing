@@ -32,7 +32,7 @@ This project rigorously applies core software engineering principles and design 
 - SceneBuilder
 
 **Application Logic** 
-- Java:
+- Java
 
 **Database**
 - JDK
