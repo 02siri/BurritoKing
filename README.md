@@ -1,5 +1,7 @@
 
 # BurritoKing
+<img width="855" height="585" alt="Screenshot 2025-08-04 at 4 21 34 pm" src="https://github.com/user-attachments/assets/87ca69f0-7824-4843-b202-9d0f38540a8c" />
+
 
 BurritoKing is a high-performance, user-friendly **food ordering desktop application** developed using **Java**. Designed with the **Model-View-Controller (MVC) architectural pattern** and adhering to **Object-Oriented Programming (OOP) principles**, BurritoKing offers a seamless experience for both customers and administrators.
 
